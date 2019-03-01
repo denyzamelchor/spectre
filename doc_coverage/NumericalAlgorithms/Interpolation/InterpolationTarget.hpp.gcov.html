@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - 580fcc492fd852ea92f848c1948fe73d778b3670 - NumericalAlgorithms/Interpolation/InterpolationTarget.hpp</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title"> SpECTRE Documentation Coverage Report</td></tr>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">NumericalAlgorithms/Interpolation</a> - InterpolationTarget.hpp</td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+             <td class="headerItem">Commit:</td>
+             <td class="headerValue"><a target="_blank" href="https://github.com/sxs-collaboration/spectre/commit/580fcc492fd852ea92f848c1948fe73d778b3670">580fcc492fd852ea92f848c1948fe73d778b3670</a></td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntryLo">10.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2019-03-01 14:00:03</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<span class="lineNum">       1 </span><span class="lineNoCov">          0 : // Distributed under the MIT License.</span>
+<span class="lineNum">       2 </span>            : // See LICENSE.txt for details.
+<span class="lineNum">       3 </span>            : 
+<span class="lineNum">       4 </span>            : #pragma once
+<span class="lineNum">       5 </span>            : 
+<span class="lineNum">       6 </span>            : #include &lt;memory&gt;
+<span class="lineNum">       7 </span>            : 
+<span class="lineNum">       8 </span>            : #include &quot;DataStructures/DataBox/DataBox.hpp&quot;
+<span class="lineNum">       9 </span>            : #include &quot;Domain/Creators/DomainCreator.hpp&quot;
+<span class="lineNum">      10 </span>            : #include &quot;Domain/Domain.hpp&quot;
+<span class="lineNum">      11 </span>            : #include &quot;Parallel/ConstGlobalCache.hpp&quot;
+<span class="lineNum">      12 </span>            : #include &quot;Parallel/Invoke.hpp&quot;
+<span class="lineNum">      13 </span>            : #include &quot;Utilities/TMPL.hpp&quot;
+<span class="lineNum">      14 </span>            : 
+<span class="lineNum">      15 </span>            : /// \cond
+<span class="lineNum">      16 </span>            : namespace intrp {
+<span class="lineNum">      17 </span>            : namespace Actions {
+<span class="lineNum">      18 </span>            : template &lt;typename InterpolationTargetTag&gt;
+<span class="lineNum">      19 </span>            : struct InitializeInterpolationTarget;
+<span class="lineNum">      20 </span>            : }  // namespace Actions
+<span class="lineNum">      21 </span>            : }  // namespace intrp
+<span class="lineNum">      22 </span>            : /// \endcond
+<span class="lineNum">      23 </span>            : 
+<span class="lineNum">      24 </span>            : namespace intrp {
+<span class="lineNum">      25 </span>            : 
+<span class="lineNum">      26 </span>            : /// \brief ParallelComponent representing a set of points to be interpolated
+<span class="lineNum">      27 </span>            : /// to and a function to call upon interpolation to those points.
+<span class="lineNum">      28 </span>            : ///
+<span class="lineNum">      29 </span>            : /// Each InterpolationTarget will communicate with the `Interpolator`.
+<span class="lineNum">      30 </span>            : ///
+<span class="lineNum">      31 </span>            : /// `InterpolationTargetTag` must contain the following type aliases:
+<span class="lineNum">      32 </span>            : /// - vars_to_interpolate_to_target: a `tmpl::list` of tags describing
+<span class="lineNum">      33 </span>            : ///                                  variables to interpolate.  Will be used
+<span class="lineNum">      34 </span>            : ///                                  to construct a `Variables`.
+<span class="lineNum">      35 </span>            : /// - compute_items_on_source:       a `tmpl::list` of compute items that uses
+<span class="lineNum">      36 </span>            : ///                                  `Metavariables::interpolator_source_vars`
+<span class="lineNum">      37 </span>            : ///                                  as input and computes the `Variables`
+<span class="lineNum">      38 </span>            : ///                                  defined by `vars_to_interpolate_to_target`.
+<span class="lineNum">      39 </span>            : /// - compute_items_on_target:       a `tmpl::list` of compute items that uses
+<span class="lineNum">      40 </span>            : ///                                 `vars_to_interpolate_to_target` as input.
+<span class="lineNum">      41 </span>            : /// - compute_target_points:         a `simple_action` of `InterpolationTarget`
+<span class="lineNum">      42 </span>            : ///                                  that computes the target points and
+<span class="lineNum">      43 </span>            : ///                                  sends them to `Interpolators`.
+<span class="lineNum">      44 </span>            : ///                                  It takes a `temporal_id` as an extra
+<span class="lineNum">      45 </span>            : ///                                  argument.  `compute_target_points` can
+<span class="lineNum">      46 </span>            : ///                                  (optionally) have an additional function
+<span class="lineNum">      47 </span>            : ///```
+<span class="lineNum">      48 </span>            : ///   static auto initialize(db::DataBox&lt;DbTags&gt;&amp;&amp;,
+<span class="lineNum">      49 </span>            : ///                          const Parallel::ConstGlobalCache&lt;Metavariables&gt;&amp;)
+<span class="lineNum">      50 </span>            : ///                          noexcept;
+<span class="lineNum">      51 </span>            : ///```
+<span class="lineNum">      52 </span>            : ///                                  that adds arbitrary tags to the `DataBox`
+<span class="lineNum">      53 </span>            : ///                                  when the `InterpolationTarget` is
+<span class="lineNum">      54 </span>            : ///                                  initialized.  If `compute_target_points`
+<span class="lineNum">      55 </span>            : ///                                  has an `initialize` function, it
+<span class="lineNum">      56 </span>            : ///                                  must also have a type alias
+<span class="lineNum">      57 </span>            : ///                                  `initialization_tags`
+<span class="lineNum">      58 </span>            : ///                                  which is a `tmpl::list` of the tags that
+<span class="lineNum">      59 </span>            : ///                                  are added by `initialize`.
+<span class="lineNum">      60 </span>            : /// - post_interpolation_callback:   a struct with a type alias
+<span class="lineNum">      61 </span>            : ///                                  `const_global_cache_tags` (listing tags
+<span class="lineNum">      62 </span>            : ///                                  that should be read from option parsing)
+<span class="lineNum">      63 </span>            : ///                                  and with a static function
+<span class="lineNum">      64 </span>            : ///```
+<span class="lineNum">      65 </span>            : ///     void apply(const DataBox&lt;DbTags&gt;&amp;,
+<span class="lineNum">      66 </span>            : ///                const intrp::ConstGlobalCache&lt;Metavariables&gt;&amp;,
+<span class="lineNum">      67 </span>            : ///                const Metavariables::temporal_id&amp;) noexcept;
+<span class="lineNum">      68 </span>            : ///```
+<span class="lineNum">      69 </span>            : /// or
+<span class="lineNum">      70 </span>            : ///```
+<span class="lineNum">      71 </span>            : ///     bool apply(const gsl::not_null&lt;db::DataBox&lt;DbTags&gt;*&gt;,
+<span class="lineNum">      72 </span>            : ///                const gsl::not_null&lt;intrp::ConstGlobalCache&lt;Metavariables&gt;*&gt;,
+<span class="lineNum">      73 </span>            : ///                const Metavariables::temporal_id&amp;) noexcept;
+<span class="lineNum">      74 </span>            : ///```
+<span class="lineNum">      75 </span>            : ///                            that will be called when interpolation is
+<span class="lineNum">      76 </span>            : ///                            complete.  `DbTags` includes everything in
+<span class="lineNum">      77 </span>            : ///                            `vars_to_interpolate_to_target`, plus everything
+<span class="lineNum">      78 </span>            : ///                            in `compute_items_on_target`.  The second form
+<span class="lineNum">      79 </span>            : ///                            of the `apply` function should return false only
+<span class="lineNum">      80 </span>            : ///                            if it calls another `intrp::Action` that still
+<span class="lineNum">      81 </span>            : ///                            needs the volume data at this temporal_id (such
+<span class="lineNum">      82 </span>            : ///                            as another iteration of the horizon finder).
+<span class="lineNum">      83 </span>            : ///
+<span class="lineNum">      84 </span>            : /// `Metavariables` must contain the following type aliases:
+<span class="lineNum">      85 </span>            : /// - interpolator_source_vars:   a `tmpl::list` of tags that define a
+<span class="lineNum">      86 </span>            : ///                               `Variables` sent from all `Element`s
+<span class="lineNum">      87 </span>            : ///                               to the local `Interpolator`.
+<span class="lineNum">      88 </span>            : /// - interpolation_target_tags:  a `tmpl::list` of all
+<span class="lineNum">      89 </span>            : ///                               `InterpolationTargetTag`s.
+<span class="lineNum">      90 </span>            : /// - temporal_id:                the type held by ::intrp::Tags::TemporalIds.
+<span class="lineNum">      91 </span>            : /// - domain_frame:               The `::Frame` of the Domain.
+<span class="lineNum">      92 </span>            : /// `Metavariables` must contain the following static constexpr members:
+<span class="lineNum">      93 </span>            : /// - size_t domain_dim:    The dimension of the Domain.
+<span class="lineNum">      94 </span>            : template &lt;class Metavariables, typename InterpolationTargetTag&gt;
+<span class="lineNum">      95 </span><span class="lineCov">          1 : struct InterpolationTarget {</span>
+<span class="lineNum">      96 </span><span class="lineNoCov">          0 :   using chare_type = ::Parallel::Algorithms::Singleton;</span>
+<span class="lineNum">      97 </span><span class="lineNoCov">          0 :   using metavariables = Metavariables;</span>
+<span class="lineNum">      98 </span><span class="lineNoCov">          0 :   using action_list = tmpl::list&lt;&gt;;</span>
+<span class="lineNum">      99 </span><span class="lineNoCov">          0 :   using initial_databox =</span>
+<span class="lineNum">     100 </span>            :       db::compute_databox_type&lt;typename Actions::InitializeInterpolationTarget&lt;
+<span class="lineNum">     101 </span>            :           InterpolationTargetTag&gt;::template return_tag_list&lt;Metavariables&gt;&gt;;
+<span class="lineNum">     102 </span><span class="lineNoCov">          0 :   using options = tmpl::list&lt;::OptionTags::DomainCreator&lt;</span>
+<span class="lineNum">     103 </span>            :       Metavariables::domain_dim,
+<span class="lineNum">     104 </span>            :       typename Metavariables::domain_frame&gt;&gt;;
+<span class="lineNum">     105 </span><span class="lineNoCov">          0 :   using const_global_cache_tag_list = Parallel::get_const_global_cache_tags&lt;</span>
+<span class="lineNum">     106 </span>            :       tmpl::list&lt;typename InterpolationTargetTag::compute_target_points,
+<span class="lineNum">     107 </span>            :                  typename InterpolationTargetTag::post_interpolation_callback&gt;&gt;;
+<span class="lineNum">     108 </span>            : 
+<span class="lineNum">     109 </span><span class="lineNoCov">          0 :   static void initialize(</span>
+<span class="lineNum">     110 </span>            :       Parallel::CProxy_ConstGlobalCache&lt;metavariables&gt;&amp; global_cache,
+<span class="lineNum">     111 </span>            :       std::unique_ptr&lt;
+<span class="lineNum">     112 </span>            :           DomainCreator&lt;Metavariables::domain_dim,
+<span class="lineNum">     113 </span>            :                         typename Metavariables::domain_frame&gt;&gt;
+<span class="lineNum">     114 </span>            :           domain_creator) noexcept;
+<span class="lineNum">     115 </span><span class="lineNoCov">          0 :   static void execute_next_phase(</span>
+<span class="lineNum">     116 </span>            :       typename metavariables::Phase /*next_phase*/,
+<span class="lineNum">     117 </span>            :       const Parallel::CProxy_ConstGlobalCache&lt;metavariables&gt;&amp;
+<span class="lineNum">     118 </span>            :       /*global_cache*/) noexcept {}
+<span class="lineNum">     119 </span>            : };
+<span class="lineNum">     120 </span>            : 
+<span class="lineNum">     121 </span>            : template &lt;class Metavariables, typename InterpolationTargetTag&gt;
+<span class="lineNum">     122 </span>            : void InterpolationTarget&lt;Metavariables, InterpolationTargetTag&gt;::initialize(
+<span class="lineNum">     123 </span>            :     Parallel::CProxy_ConstGlobalCache&lt;metavariables&gt;&amp; global_cache,
+<span class="lineNum">     124 </span>            :     std::unique_ptr&lt;
+<span class="lineNum">     125 </span>            :         DomainCreator&lt;Metavariables::domain_dim,
+<span class="lineNum">     126 </span>            :                       typename Metavariables::domain_frame&gt;&gt;
+<span class="lineNum">     127 </span>            :         domain_creator) noexcept {
+<span class="lineNum">     128 </span>            :   auto&amp; my_proxy = Parallel::get_parallel_component&lt;InterpolationTarget&gt;(
+<span class="lineNum">     129 </span>            :       *(global_cache.ckLocalBranch()));
+<span class="lineNum">     130 </span>            :   Parallel::simple_action&lt;
+<span class="lineNum">     131 </span>            :       Actions::InitializeInterpolationTarget&lt;InterpolationTargetTag&gt;&gt;(
+<span class="lineNum">     132 </span>            :       my_proxy, domain_creator-&gt;create_domain());
+<span class="lineNum">     133 </span>            : }
+<span class="lineNum">     134 </span>            : 
+<span class="lineNum">     135 </span>            : }  // namespace intrp
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

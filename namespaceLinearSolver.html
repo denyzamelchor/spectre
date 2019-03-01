@@ -1,0 +1,379 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: LinearSolver Namespace Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="popper.min.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="index.html">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Introduction</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="installation.html">
+              <i class="octicon octicon-desktop-download"></i><span>Installation</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>User Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="code_of_conduct.html">
+              <i class="octicon octicon-comment-discussion"></i><span>Code of Conduct</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="contributing_to_spectre.html">
+              <i class="octicon octicon-git-pull-request"></i><span>Contributing Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Code Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Topics</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <li>
+        <a href="citelist.html">
+          <i class="octicon octicon-file-text"></i><span>Bibliography</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+          <i class="octicon octicon-mark-github"></i><span>View on GitHub</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div>
+<!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">LinearSolver Namespace Reference<div class="ingroups"><a class="el" href="group__LinearSolverGroup.html">Linear Solver</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Functionality for solving linear systems of equations.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceLinearSolver_1_1InnerProductImpls"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLinearSolver_1_1InnerProductImpls.html">InnerProductImpls</a></td></tr>
+<tr class="memdesc:namespaceLinearSolver_1_1InnerProductImpls"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementations of <a class="el" href="group__LinearSolverGroup.html#ga9f4f80fb21f848e2fac02bebe6c1d1e0" title="The local part of the Euclidean inner product on the vector space w.r.t. which the addition and scala...">LinearSolver::inner_product</a>. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceLinearSolver_1_1Tags"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLinearSolver_1_1Tags.html">Tags</a></td></tr>
+<tr class="memdesc:namespaceLinearSolver_1_1Tags"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="group__DataBoxGroup.html">DataBox</a> tags associated with the linear solver. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLinearSolver_1_1ConjugateGradient.html">ConjugateGradient</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A conjugate gradient solver for linear systems of equations \(Ax=b\) where the operator \(A\) is symmetric.  <a href="structLinearSolver_1_1ConjugateGradient.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLinearSolver_1_1ConvergenceCriteria.html">ConvergenceCriteria</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Criteria that determine the linear solve has converged.  <a href="structLinearSolver_1_1ConvergenceCriteria.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLinearSolver_1_1Gmres.html">Gmres</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A GMRES solver for nonsymmetric linear systems of equations \(Ax=b\).  <a href="structLinearSolver_1_1Gmres.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLinearSolver_1_1HasConverged.html">HasConverged</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signals convergence of the linear solver.  <a href="structLinearSolver_1_1HasConverged.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies a step in the linear solver algorithm.  <a href="structLinearSolver_1_1IterationId.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a6347fe7aa196f04b7ed88903b980c52e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLinearSolver.html#a6347fe7aa196f04b7ed88903b980c52e">ConvergenceReason</a> { <b>MaxIterations</b>, 
+<b>AbsoluteResidual</b>, 
+<b>RelativeResidual</b>
+ }<tr class="memdesc:a6347fe7aa196f04b7ed88903b980c52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reason the linear solver has converged.  <a href="namespaceLinearSolver.html#a6347fe7aa196f04b7ed88903b980c52e">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a6347fe7aa196f04b7ed88903b980c52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aec26c5a31ec907b5b9edd6db808f1855"><td class="memItemLeft" align="right" valign="top"><a id="aec26c5a31ec907b5b9edd6db808f1855"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="structLinearSolver_1_1ConvergenceCriteria.html">ConvergenceCriteria</a> &amp;lhs, const <a class="el" href="structLinearSolver_1_1ConvergenceCriteria.html">ConvergenceCriteria</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:aec26c5a31ec907b5b9edd6db808f1855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad63a07f58e8f43f5c64126480fb1544"><td class="memItemLeft" align="right" valign="top"><a id="aad63a07f58e8f43f5c64126480fb1544"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="structLinearSolver_1_1ConvergenceCriteria.html">ConvergenceCriteria</a> &amp;lhs, const <a class="el" href="structLinearSolver_1_1ConvergenceCriteria.html">ConvergenceCriteria</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:aad63a07f58e8f43f5c64126480fb1544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8c8e066c5d8264b96b1c5be003792f1"><td class="memItemLeft" align="right" valign="top"><a id="ad8c8e066c5d8264b96b1c5be003792f1"></a>
+<a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;os, const <a class="el" href="namespaceLinearSolver.html#a6347fe7aa196f04b7ed88903b980c52e">ConvergenceReason</a> &amp;convergence_reason) noexcept</td></tr>
+<tr class="separator:ad8c8e066c5d8264b96b1c5be003792f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d92a1b42e47cc1c82b30a3abb81c08"><td class="memItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="namespaceLinearSolver.html#a6347fe7aa196f04b7ed88903b980c52e">ConvergenceReason</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLinearSolver.html#af7d92a1b42e47cc1c82b30a3abb81c08">convergence_criteria_match</a> (const <a class="el" href="structLinearSolver_1_1ConvergenceCriteria.html">ConvergenceCriteria</a> &amp;convergence_criteria, const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;iteration_id, double residual_magnitude, double initial_residual_magnitude) noexcept</td></tr>
+<tr class="memdesc:af7d92a1b42e47cc1c82b30a3abb81c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the <code>convergence_criteria</code> are met.  <a href="#af7d92a1b42e47cc1c82b30a3abb81c08">More...</a><br /></td></tr>
+<tr class="separator:af7d92a1b42e47cc1c82b30a3abb81c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a341dbdfa8d09ae48c5a3da59fb2a62f6"><td class="memItemLeft" align="right" valign="top"><a id="a341dbdfa8d09ae48c5a3da59fb2a62f6"></a>
+<a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;os, const <a class="el" href="structLinearSolver_1_1HasConverged.html">HasConverged</a> &amp;has_converged) noexcept</td></tr>
+<tr class="separator:a341dbdfa8d09ae48c5a3da59fb2a62f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a821b6da812d95bfd01c9cbedf6ad01ef"><td class="memItemLeft" align="right" valign="top"><a id="a821b6da812d95bfd01c9cbedf6ad01ef"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="structLinearSolver_1_1HasConverged.html">HasConverged</a> &amp;lhs, const <a class="el" href="structLinearSolver_1_1HasConverged.html">HasConverged</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:a821b6da812d95bfd01c9cbedf6ad01ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad9e935844603688f9d89566f5908c3a"><td class="memItemLeft" align="right" valign="top"><a id="aad9e935844603688f9d89566f5908c3a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="structLinearSolver_1_1HasConverged.html">HasConverged</a> &amp;lhs, const <a class="el" href="structLinearSolver_1_1HasConverged.html">HasConverged</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:aad9e935844603688f9d89566f5908c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f4f80fb21f848e2fac02bebe6c1d1e0"><td class="memTemplParams" colspan="2">template&lt;typename Lhs , typename Rhs &gt; </td></tr>
+<tr class="memitem:ga9f4f80fb21f848e2fac02bebe6c1d1e0"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__LinearSolverGroup.html#ga9f4f80fb21f848e2fac02bebe6c1d1e0">inner_product</a> (const Lhs &amp;lhs, const Rhs &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:ga9f4f80fb21f848e2fac02bebe6c1d1e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The local part of the Euclidean inner product on the vector space w.r.t. which the addition and scalar multiplication of both <code>Lhs</code> and <code>Rhs</code> is defined.  <a href="group__LinearSolverGroup.html#ga9f4f80fb21f848e2fac02bebe6c1d1e0">More...</a><br /></td></tr>
+<tr class="separator:ga9f4f80fb21f848e2fac02bebe6c1d1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaec6c27cc2f064a3d194974c7e7c882d"><td class="memItemLeft" align="right" valign="top"><a id="aaec6c27cc2f064a3d194974c7e7c882d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;a, const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;b) noexcept</td></tr>
+<tr class="separator:aaec6c27cc2f064a3d194974c7e7c882d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6f1e0702600e9f39e17900b1871d44b"><td class="memItemLeft" align="right" valign="top"><a id="af6f1e0702600e9f39e17900b1871d44b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;a, const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;b) noexcept</td></tr>
+<tr class="separator:af6f1e0702600e9f39e17900b1871d44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fc34c0b4c941a0ef10777c1d5d02cad"><td class="memItemLeft" align="right" valign="top"><a id="a8fc34c0b4c941a0ef10777c1d5d02cad"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;a, const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;b) noexcept</td></tr>
+<tr class="separator:a8fc34c0b4c941a0ef10777c1d5d02cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a16c86388bfeceba228e31d901b1a38"><td class="memItemLeft" align="right" valign="top"><a id="a4a16c86388bfeceba228e31d901b1a38"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;=</b> (const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;a, const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;b) noexcept</td></tr>
+<tr class="separator:a4a16c86388bfeceba228e31d901b1a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41ad471b2e261d749891508338c05cee"><td class="memItemLeft" align="right" valign="top"><a id="a41ad471b2e261d749891508338c05cee"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;a, const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;b) noexcept</td></tr>
+<tr class="separator:a41ad471b2e261d749891508338c05cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d2a4267ee2832e84d08b2f8ba6e3b49"><td class="memItemLeft" align="right" valign="top"><a id="a8d2a4267ee2832e84d08b2f8ba6e3b49"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;=</b> (const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;a, const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;b) noexcept</td></tr>
+<tr class="separator:a8d2a4267ee2832e84d08b2f8ba6e3b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ff45e84e6b71f5bf242a1b3d8080be"><td class="memItemLeft" align="right" valign="top"><a id="ab5ff45e84e6b71f5bf242a1b3d8080be"></a>
+<a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;s, const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;id) noexcept</td></tr>
+<tr class="separator:ab5ff45e84e6b71f5bf242a1b3d8080be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3863a29c6381006391599e2a677ae57"><td class="memItemLeft" align="right" valign="top"><a id="ae3863a29c6381006391599e2a677ae57"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>hash_value</b> (const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;id) noexcept</td></tr>
+<tr class="separator:ae3863a29c6381006391599e2a677ae57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Functionality for solving linear systems of equations. </p>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a6347fe7aa196f04b7ed88903b980c52e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6347fe7aa196f04b7ed88903b980c52e">&#9670;&nbsp;</a></span>ConvergenceReason</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespaceLinearSolver.html#a6347fe7aa196f04b7ed88903b980c52e">LinearSolver::ConvergenceReason</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The reason the linear solver has converged. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structLinearSolver_1_1ConvergenceCriteria.html" title="Criteria that determine the linear solve has converged. ">LinearSolver::ConvergenceCriteria</a> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="af7d92a1b42e47cc1c82b30a3abb81c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d92a1b42e47cc1c82b30a3abb81c08">&#9670;&nbsp;</a></span>convergence_criteria_match()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::optional&lt; <a class="el" href="namespaceLinearSolver.html#a6347fe7aa196f04b7ed88903b980c52e">ConvergenceReason</a> &gt; LinearSolver::convergence_criteria_match </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLinearSolver_1_1ConvergenceCriteria.html">ConvergenceCriteria</a> &amp;&#160;</td>
+          <td class="paramname"><em>convergence_criteria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structLinearSolver_1_1IterationId.html">IterationId</a> &amp;&#160;</td>
+          <td class="paramname"><em>iteration_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>residual_magnitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>initial_residual_magnitude</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine whether the <code>convergence_criteria</code> are met. </p>
+<dl class="section note"><dt>Note</dt><dd>This function assumes the <code>iteration_id</code> is that of the next, but not yet performed step. For instance, a <code>MaxIteration</code> criterion of 1 will match if the <code>iteration_id</code> is 1 or higher, since the first iteration (with id 0) has been completed. At this point, also the <code>residual_magnitude</code> reflects the state of the algorithm after completion of the first iteration. The <code>initial_residual_magnitude</code> always refers to the state before the first iteration has begun.</dd></dl>
+<p><em>Returns:</em> a <code><a class="el" href="namespaceLinearSolver.html#a6347fe7aa196f04b7ed88903b980c52e" title="The reason the linear solver has converged. ">LinearSolver::ConvergenceReason</a></code> if the criteria are met, or <code>boost::none</code> otherwise. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017 - 2019
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: Spin-weighted spherical harmonics</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="popper.min.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="index.html">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Introduction</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="installation.html">
+              <i class="octicon octicon-desktop-download"></i><span>Installation</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>User Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="code_of_conduct.html">
+              <i class="octicon octicon-comment-discussion"></i><span>Code of Conduct</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="contributing_to_spectre.html">
+              <i class="octicon octicon-git-pull-request"></i><span>Contributing Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Code Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Topics</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <li>
+        <a href="citelist.html">
+          <i class="octicon octicon-file-text"></i><span>Bibliography</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+          <i class="octicon octicon-mark-github"></i><span>View on GitHub</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div>
+<!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
+  <div class="headertitle">
+<div class="title">Spin-weighted spherical harmonics</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpectral_1_1Swsh_1_1Tags_1_1Eth.html">Spectral::Swsh::Tags::Eth</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for labeling the \(\eth\) spin-weighted derivative in tags.  <a href="structSpectral_1_1Swsh_1_1Tags_1_1Eth.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpectral_1_1Swsh_1_1Tags_1_1Ethbar.html">Spectral::Swsh::Tags::Ethbar</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for labeling the \(\bar{\eth}\) spin-weighted derivative in tags.  <a href="structSpectral_1_1Swsh_1_1Tags_1_1Ethbar.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpectral_1_1Swsh_1_1Tags_1_1EthEth.html">Spectral::Swsh::Tags::EthEth</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for labeling the \(\eth^2\) spin-weighted derivative in tags.  <a href="structSpectral_1_1Swsh_1_1Tags_1_1EthEth.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpectral_1_1Swsh_1_1Tags_1_1EthbarEth.html">Spectral::Swsh::Tags::EthbarEth</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for labeling the \(\bar{\eth} \eth\) spin-weighted derivative in tags.  <a href="structSpectral_1_1Swsh_1_1Tags_1_1EthbarEth.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpectral_1_1Swsh_1_1Tags_1_1EthEthbar.html">Spectral::Swsh::Tags::EthEthbar</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for labeling the \(\eth \bar{\eth}\) spin-weighted derivative in tags.  <a href="structSpectral_1_1Swsh_1_1Tags_1_1EthEthbar.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpectral_1_1Swsh_1_1Tags_1_1EthbarEthbar.html">Spectral::Swsh::Tags::EthbarEthbar</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for labeling the \(\bar{\eth}^2\) spin-weighted derivative in tags.  <a href="structSpectral_1_1Swsh_1_1Tags_1_1EthbarEthbar.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpectral_1_1Swsh_1_1Tags_1_1Derivative.html">Spectral::Swsh::Tags::Derivative&lt; Tag, DerivativeKind &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix tag representing the spin-weighted derivative of a spin-weighted scalar.  <a href="structSpectral_1_1Swsh_1_1Tags_1_1Derivative.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSpectral_1_1Swsh_1_1Tags_1_1SwshTransform.html">Spectral::Swsh::Tags::SwshTransform&lt; Tag &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix tag representing the spin-weighted spherical harmonic transform of a spin-weighted scalar.  <a href="structSpectral_1_1Swsh_1_1Tags_1_1SwshTransform.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:gace035d5d0a36b475064a23d0ffd69941"><td class="memTemplParams" colspan="2">template&lt;int Spin, typename TagList &gt; </td></tr>
+<tr class="memitem:gace035d5d0a36b475064a23d0ffd69941"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__SwshGroup.html#gace035d5d0a36b475064a23d0ffd69941">Spectral::Swsh::get_tags_with_spin</a> = tmpl::remove_duplicates&lt; tmpl::filter&lt; TagList, detail::has_spin&lt; tmpl::_1, <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/integral_constant.html">std::integral_constant</a>&lt; int, Spin &gt; &gt;&gt; &gt;</td></tr>
+<tr class="memdesc:gace035d5d0a36b475064a23d0ffd69941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract from <code>TagList</code> the subset of those tags that have a static int member <code>spin</code> equal to the template parameter <code>Spin</code>.  <a href="group__SwshGroup.html#gace035d5d0a36b475064a23d0ffd69941">More...</a><br /></td></tr>
+<tr class="separator:gace035d5d0a36b475064a23d0ffd69941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga795651af0ac8f3db4d5676d590c4e3b9"><td class="memTemplParams" colspan="2">template&lt;int Spin, typename TagList &gt; </td></tr>
+<tr class="memitem:ga795651af0ac8f3db4d5676d590c4e3b9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__SwshGroup.html#ga795651af0ac8f3db4d5676d590c4e3b9">Spectral::Swsh::get_prefix_tags_that_wrap_tags_with_spin</a> = tmpl::filter&lt; TagList, tmpl::bind&lt; detail::wrapped_has_spin, tmpl::_1, <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/integral_constant.html">std::integral_constant</a>&lt; int, Spin &gt; &gt;&gt;</td></tr>
+<tr class="memdesc:ga795651af0ac8f3db4d5676d590c4e3b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract from <code>TagList</code> the subset of those tags that wrap a tag that has a static int member <code>spin</code> equal to the template parameter <code>Spin</code>.  <a href="group__SwshGroup.html#ga795651af0ac8f3db4d5676d590c4e3b9">More...</a><br /></td></tr>
+<tr class="separator:ga795651af0ac8f3db4d5676d590c4e3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Utilities, tags, and metafunctions for using and manipulating spin-weighted spherical harmonics </p>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga795651af0ac8f3db4d5676d590c4e3b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga795651af0ac8f3db4d5676d590c4e3b9">&#9670;&nbsp;</a></span>get_prefix_tags_that_wrap_tags_with_spin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Spin, typename TagList &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__SwshGroup.html#ga795651af0ac8f3db4d5676d590c4e3b9">Spectral::Swsh::get_prefix_tags_that_wrap_tags_with_spin</a> = typedef tmpl::filter&lt;TagList, tmpl::bind&lt;detail::wrapped_has_spin, tmpl::_1, <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/integral_constant.html">std::integral_constant</a>&lt;int, Spin&gt; &gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extract from <code>TagList</code> the subset of those tags that wrap a tag that has a static int member <code>spin</code> equal to the template parameter <code>Spin</code>. </p>
+<div class="fragment"><div class="line"><span class="keyword">using</span> WrappedTagList = tmpl::list&lt;Derivative&lt;SpinMinus1TestTag, Eth&gt;,</div><div class="line">                                  Derivative&lt;SpinMinus1TestTag, EthEthbar&gt;,</div><div class="line">                                  Derivative&lt;AnotherSpinMinus1TestTag, EthEth&gt;,</div><div class="line">                                  Derivative&lt;Spin2TestTag, Ethbar&gt;&gt;;</div><div class="line">static_assert(<a class="code" href="group__TypeTraitsGroup.html#ga173105b805ff5fa637edb005f704feca">cpp17::is_same_v</a>&lt;</div><div class="line">                  get_prefix_tags_that_wrap_tags_with_spin&lt;-1, WrappedTagList&gt;,</div><div class="line">                  tmpl::list&lt;Derivative&lt;SpinMinus1TestTag, Eth&gt;,</div><div class="line">                             Derivative&lt;SpinMinus1TestTag, EthEthbar&gt;,</div><div class="line">                             Derivative&lt;AnotherSpinMinus1TestTag, EthEth&gt;&gt;&gt;,</div><div class="line">              <span class="stringliteral">&quot;failed testing get_wrapped_tags_with_spin_from_prefix_tag_list&quot;</span>);</div></div><!-- fragment -->
+</div>
+</div>
+<a id="gace035d5d0a36b475064a23d0ffd69941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gace035d5d0a36b475064a23d0ffd69941">&#9670;&nbsp;</a></span>get_tags_with_spin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Spin, typename TagList &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__SwshGroup.html#gace035d5d0a36b475064a23d0ffd69941">Spectral::Swsh::get_tags_with_spin</a> = typedef tmpl::remove_duplicates&lt;tmpl::filter&lt; TagList, detail::has_spin&lt;tmpl::_1, <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/integral_constant.html">std::integral_constant</a>&lt;int, Spin&gt; &gt;&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extract from <code>TagList</code> the subset of those tags that have a static int member <code>spin</code> equal to the template parameter <code>Spin</code>. </p>
+<div class="fragment"><div class="line"><span class="keyword">using</span> TestVarTagList = tmpl::list&lt;SpinMinus1TestTag, SpinMinus1TestTag,</div><div class="line">                                  AnotherSpinMinus1TestTag, Spin2TestTag&gt;;</div><div class="line"></div><div class="line">static_assert(</div><div class="line">    <a class="code" href="group__TypeTraitsGroup.html#ga173105b805ff5fa637edb005f704feca">cpp17::is_same_v</a>&lt;get_tags_with_spin&lt;-1, TestVarTagList&gt;,</div><div class="line">                     tmpl::list&lt;SpinMinus1TestTag, AnotherSpinMinus1TestTag&gt;&gt;,</div><div class="line">    <span class="stringliteral">&quot;failed testing get_tags_with_spin&quot;</span>);</div><div class="line"></div><div class="line"><span class="keyword">using</span> TestDerivativeTagList =</div><div class="line">    tmpl::list&lt;Derivative&lt;SpinMinus1TestTag, Eth&gt;,</div><div class="line">               Derivative&lt;SpinMinus1TestTag, EthEthbar&gt;,</div><div class="line">               Derivative&lt;AnotherSpinMinus1TestTag, EthEth&gt;,</div><div class="line">               Derivative&lt;Spin2TestTag, Ethbar&gt;&gt;;</div><div class="line"></div><div class="line">static_assert(</div><div class="line">    <a class="code" href="group__TypeTraitsGroup.html#ga173105b805ff5fa637edb005f704feca">cpp17::is_same_v</a>&lt;get_tags_with_spin&lt;1, TestDerivativeTagList&gt;,</div><div class="line">                     tmpl::list&lt;Derivative&lt;AnotherSpinMinus1TestTag, EthEth&gt;,</div><div class="line">                                Derivative&lt;Spin2TestTag, Ethbar&gt;&gt;&gt;,</div><div class="line">    <span class="stringliteral">&quot;failed testing get_tags_with_spin&quot;</span>);</div></div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017 - 2019
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>
